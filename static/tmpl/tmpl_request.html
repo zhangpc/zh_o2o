@@ -1,0 +1,29 @@
+{{each messageres['res_id']}}
+<tr id =${"reslist"+messageres.res_id[$index]} class = ${messageres.res_id[$index]} index = ${messageres.res_id[$index]}>
+     <td>${messageres.res_id[$index]}</td>
+     <td>${messageres.res_name[$index]}</td>
+     <td>${messageres.res_describe[$index]}</td>
+     <td><a id = ${"detail"+messageres.res_id[$index]} class="detail" onclick="message_res(this)">详细</a>
+         <a id=${"submit"+messageres.res_id[$index]} class="submit" >提交</a>
+     </td>
+</tr>
+
+<tr id = ${"dataModel"+messageres.res_id[$index]} class="dataModel_colspan" style="display: none">
+    <td style="background:gainsboro"  colspan="5">
+        <table class="table" style="background: gainsboro" >
+            <theard>
+                <tr>
+                    <th colspan="5">参数模型</th>
+                </tr>
+                <tr class="heading" role="row">
+                    <th>id</th>
+                    <th>名字</th>
+                    <th>参数</th>
+                    <th>描述</th>
+                </tr>
+            </theard>
+            <tbody class ="${"datalist"+messageres.res_id[$index]}"></tbody>
+        </table>
+    </td>
+</tr>
+{{/each}}

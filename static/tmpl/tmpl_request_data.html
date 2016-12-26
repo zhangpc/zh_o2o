@@ -1,0 +1,11 @@
+{{each messagedata['res_id']}}
+<tr id = ${"tr"+messagedata.data_id[$index]}>
+    <td ><label class ='data_id' disabled value=${messagedata.data_id[$index]}>${messagedata.data_id[$index]}</label></td>
+    <td><input type="text" class ='data_name' value=${messagedata.data_name[$index]}></td>
+    <td><input type="text" class = 'data_value'  value=${messagedata.data_value[$index]}></td>
+    <td><input type="text" class = 'data_describe' value=${messagedata.data_describe[$index]}></td>
+    <td><a class="save" onclick="save_data(this)">保存</a></td>
+</tr>
+{{/each}}
+<tr><td colspan="5" style="align-content: center"><button class = 'new_data' onclick="new_data(this)">+ 新增</button></td></tr>
+

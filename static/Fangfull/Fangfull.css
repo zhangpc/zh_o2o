@@ -1,0 +1,64 @@
+body{
+    width: 1248px;
+    border: 0px;
+    padding: 0px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+#idTable {
+    width: 100%;
+    border: 1px solid gray;
+}
+.table-center{
+    width:2%
+}
+.table-funcname{
+   width:15%;
+}
+.table-describe{
+    width: 20%;
+}
+.table-pames{
+    width:40%
+}
+.table-submit{
+    width: 5%;
+}
+
+
+/*#列表中的内容*/
+
+*{
+    box-sizing:border-box;
+}
+.table-container{
+    width: 100%;
+}
+.record-list .table thead tr{
+    cursor:default;
+}
+.r-header{
+    background-color: #f3bf9c;
+    line-height: 30px;
+    padding-left: 55px;
+}
+
+.table-message-name{
+    width: 20%;
+}
+.record-list .r-body{
+    background-color:#efefef;
+    height: 200px;
+    overflow-y:scroll;
+}
+.record-list .content{
+    border-top:1px solid #ccc;
+    padding:0 5px;
+}
+
+.table-message{
+    width: 20%;
+}
+
+

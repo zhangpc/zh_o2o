@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request>
+    <login_broker name = "登录经纪人" address = 'User_login.broker_login' described = '登录经纪人，返回session'>
+        <params>
+            <ip_blue>地址</ip_blue>
+            <username>用户名</username>
+            <passwrod>密码</passwrod>
+        </params>
+    </login_broker>
+
+    <add_customer name="经纪人报备客户" address='Customer.add_customer' described="报备客户，返回用户ID">
+        <params>
+            <ip_blue>地址</ip_blue>
+            <broker_cookies>经纪人cookies</broker_cookies>
+            <customer_phone>用户手机号</customer_phone>
+            <building_id>楼盘id</building_id>
+            <building_name>楼盘名称</building_name>
+            <isdele_customer>是否删除用户手机号</isdele_customer>
+            <sqlMysql>数据连接</sqlMysql>
+        </params>
+    </add_customer>
+</request>
+

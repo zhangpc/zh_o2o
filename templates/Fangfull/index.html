@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>房否后台自动化测试</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+{#    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>#}
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='Fangfull/js/js_request.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='Fangfull/js/js_setting.js') }}"></script>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Fangfull/Fangfull.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Fangfull/settings.css') }}">
+</head>
+<body>
+
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+            <a href="#home" data-toggle="tab">设置</a>
+        </li>
+        <li><a href="#request" data-toggle="tab">RequestTools</a></li>
+        <li class="dropdown">
+            <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Web自动化 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                <li><a href="#jmeter" tabindex="-1" data-toggle="tab">jmeter</a></li>
+                <li><a href="#ejb" tabindex="-1" data-toggle="tab">ejb</a></li>
+            </ul>
+        </li>
+    </ul>
+
+{#    <select id="sql_name2" onchange="selectContent(this.options.selectedIndex)"><option>房否test站</option><option>房否beta站</option></select>#}
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="home">
+            {% include 'Fangfull/settings.html' %}
+        </div>
+        <div class="tab-pane fade" id="request" >
+            {% include 'Fangfull/request.html' %}
+        </div>
+        <div class="tab-pane fade" id="jmeter">
+            <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
+        </div>
+        <div class="tab-pane fade" id="ejb">
+            <p>Enterprise Java Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web Logic 等）的 J2EE 上。
+            </p>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
+

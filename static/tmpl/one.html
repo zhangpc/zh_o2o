@@ -1,0 +1,107 @@
+<li><b>${Name}</b> (${ReleaseYear}) <ul> {{each Langs}}<li>${$value}</li> {{/each}}</ul></li>
+
+{{each add_messageres['res_id']}}
+<tr id = 'reslist'>
+     <td>${add_messageres.res_id[$index]}</td>
+     <td>${add_messageres.res_name[$index]}</td>
+     <td>${add_messageres.res_describe[$index]}</td>
+     <td><a data-toggle="collapse" data-parent="#accordion" href="${"#res"+add_messageres.res_id[$index]}">操作</a></td>
+</tr>
+<tr id=${"res"+add_messageres.res_id[$index]} class="collapse" >
+{#panel-collapse panel-body collapse#}
+    <td colspan="5" style="text-align: center;">
+        <div class="panel-body">模型</div>
+        <ul>
+            <li>1</li>
+            <li>1</li>
+        </ul>
+    </td>
+</tr>
+
+<tr id = 'reslist'>
+     <td>${add_messageres.res_id[$index]}</td>
+     <td>${add_messageres.res_name[$index]}</td>
+     <td>${add_messageres.res_describe[$index]}</td>
+     <td> <a class="button-details ui-button-primary ui-button js-details" data-toggle="collapse"  href="${"#res"+add_messageres.res_id[$index]}>详细</a></td>
+{#      href="${"res"+add_messageres.res_id[$index]}"#}
+</tr>
+
+<
+<tr id=${"res"+add_messageres.res_id[$index]} class="row-details" style="display: none;">
+    <td class="content" colspan="5">
+        <div class="panel-body">模型</div>
+        <ul>
+            <li>133333333333333333333333333333333333333333333333333333333333333333333</li>
+            <li>1</li>
+        </ul>
+    </td>
+</tr>
+
+{{/each}}
+
+
+
+
+    <tr style="background: rosybrown"><td>
+
+    </td>
+    <td></td>
+    </tr>
+
+
+<tr style="border: 1px solid red;">
+    <td colspan="5">
+        <table class="table">
+        <theard>
+            <tr class="heading" role="row">
+                <th>id</th>
+                <th>名字</th>
+                <th>参数</th>
+                <th>描述</th>
+            </tr>
+        </theard>
+
+        {{each messagedata['res_id']}}
+            <tbody>
+
+                <tr>
+                    <td>${messagedata.data_id[$index]}</td>
+                    <td>${messagedata.data_name[$index]}</td>
+                    <td>${messagedata.data_value[$index]}</td>
+                    <td>${messagedata.data_describe[$index]}</td>
+
+                    <td>messageres.res_id =   ${messageres.res_id[$index]}</td>
+                    <td>messagedata.res_id  =  ${messagedata.res_id[$index]}</td>
+                </tr>
+
+            </tbody>
+        {{/each}}
+
+        </table>
+    </td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+<table class="table" style="background: gainsboro" >
+            <theard>
+                <tr>
+                    <th colspan="5">参数模型</th>
+                </tr>
+                <tr class="heading" role="row">
+                    <th>id</th>
+                    <th>名字</th>
+                    <th>参数</th>
+                    <th>描述</th>
+                </tr>
+            </theard>
+            <tbody id = "${"datalist"+messageres.res_id[$index]}"></tbody>
+        </table>

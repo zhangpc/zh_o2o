@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../static/css/Request.css" ,type="text/css"/>
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+
+{#    <div id = 'Request' class="Request">#}
+{#        <form method="get">#}
+{#            <ul id="Request_sumbmit" class="Request_sumbmit">#}
+{#                <li class = "Request_sumbmit_li">#}
+{#                    <span> URL :</span>#}
+{#                    <input type="text" id = "url" class = "httpUrl"/>#}
+{#                    <select id="select_Request">#}
+{#                        <option value="get" id="get">Get</option>#}
+{#                        <option value="post" id="post">Post</option>#}
+{#                    </select>#}
+{#                    <input type="button" id="submit" value="提交"/>#}
+{#                </li>#}
+{#            </ul>#}
+{#        </form>#}
+{#    </div>#}
+    <from action="/add/" method="get">
+        a: <input type="text" name = "a" id="a"><br>
+        b: <input type="text" name = "b" id="b"><br>
+        <p>result: <span id="result"></span></p>
+        <button type="button" id = 'sum'>提交</button>
+
+    </from>
+<script language="JavaScript">
+    $(document).ready(function(){
+        $("#sum").click(function(){
+            var a = $("#a").val()
+            var b = $("#b").val()
+            $.get(  "/add/",
+                    {'a':a,'b':b},
+                    function(ret) {
+                        $('#result').html(ret)
+                    }
+                )
+        });
+    });
+</script>
+
+</body>
+
+
+</html>
