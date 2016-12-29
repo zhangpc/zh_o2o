@@ -15,6 +15,8 @@ import datetime
 
 # sql_connect = Config.sql_connect(Config.sql_index).set_connect()
 
+    # 流程有变，待有时间调整
+
 # 上传图片
 def upload_index(ipblue,cookies):
     file = "./static/img/test_visit_commit_img.png"
@@ -583,4 +585,3 @@ if __name__ == '__main__':
 
     # item_id = ['100']
     # delBuilding(ip_blue,ip_red,item_id,sqlMysql)
-
