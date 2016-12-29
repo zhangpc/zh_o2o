@@ -16,6 +16,7 @@ import datetime
 # sql_connect = Config.sql_connect(Config.sql_index).set_connect()
 
     # 流程有变，待有时间调整
+    # Git使用测试
 
 # 上传图片
 def upload_index(ipblue,cookies):
@@ -569,6 +570,7 @@ if __name__ == '__main__':
 
 
     item_code  = '13'
+    print("Git使用测试")
     # item_name = '
     # '
     # ## 创建
